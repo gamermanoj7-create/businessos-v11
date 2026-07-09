@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>BusinessOS - Bank Management</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🏦 Bank Management</h1>
+
+<p>Manage Your Business Bank Accounts</p>
+
+<hr>
+
+<form id="bankForm">
+
+<input
+type="text"
+id="bankName"
+placeholder="🏦 Bank Name"
+required>
+
+<input
+type="text"
+id="accountHolder"
+placeholder="👤 Account Holder"
+required>
+
+<input
+type="text"
+id="accountNumber"
+placeholder="🔢 Account Number"
+required>
+
+<input
+type="text"
+id="ifscCode"
+placeholder="🌿 IFSC Code"
+required>
+
+<input
+type="number"
+id="openingBalance"
+placeholder="💰 Opening Balance"
+min="0"
+value="0">
+
+<br><br>
+
+<button
+type="submit"
+class="success-btn">
+
+💾 Save Account
+
+</button>
+
+</form>
+
+<hr>
+
+<h2>🏦 Bank Accounts</h2>
+
+<input
+type="text"
+id="searchBank"
+class="search-box"
+placeholder="🔍 Search Bank Account"
+onkeyup="searchBankAccount()">
+
+<br><br>
+
+<h3>
+
+🏦 Total Accounts :
+<span id="totalAccounts">0</span>
+
+</h3>
+
+<h3>
+
+💰 Total Bank Balance :
+<span id="totalBankBalance">₹0.00</span>
+
+</h3>
+
+<br>
+
+<div id="bankTable">
+
+<div class="list-card">
+
+<h3>🏦 No Bank Account Found</h3>
+
+<p>Add your first bank account.</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="button-group">
+
+<button
+type="button"
+class="primary-btn"
+onclick="refreshBankAccounts()">
+
+🔄 Refresh
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='cashbook.html'">
+
+💵 Cash Book
+
+</button>
+
+<button
+type="button"
+class="success-btn"
+onclick="location.href='index.html'">
+
+🏠 Dashboard
+
+</button>
+
+</div>
+
+</div>
+
+<script src="common.js"></script>
+<script src="bank.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Products | BusinessOS</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📦 Product Management</h1>
+
+<p>Add, Edit & Manage Products</p>
+
+<hr>
+
+<form id="productForm">
+
+<input
+type="text"
+id="productName"
+placeholder="📦 Product Name"
+required>
+
+<input
+type="text"
+id="category"
+placeholder="📂 Category"
+required>
+
+<input
+type="number"
+id="buyPrice"
+placeholder="💰 Buy Price"
+required>
+
+<input
+type="number"
+id="sellPrice"
+placeholder="🏷️ Sell Price"
+required>
+
+<input
+type="number"
+id="stock"
+placeholder="📦 Stock Quantity"
+required>
+
+<button
+type="submit"
+class="success-btn">
+
+💾 Save Product
+
+</button>
+
+</form>
+
+<hr>
+
+<h2>📋 Product List</h2>
+
+<input
+type="text"
+id="searchProduct"
+class="search-box"
+placeholder="🔍 Search Product"
+onkeyup="searchProduct()">
+
+<br><br>
+
+<h3>
+
+📦 Total Products :
+<span id="totalProducts">0</span>
+
+</h3>
+
+<br>
+
+<div id="productTable">
+
+<div class="list-card">
+
+<h3>📦 No Product Found</h3>
+
+<p>Add your first product.</p>
+
+</div>
+
+</div>
+
+<br>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='index.html'">
+
+🏠 Dashboard
+
+</button>
+
+</div>
+
+<script src="common.js"></script>
+<script src="products.js"></script>
+
+</body>
+
+</html>

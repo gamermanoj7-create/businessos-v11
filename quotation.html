@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BusinessOS - Quotation</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📄 Quotation Management</h1>
+
+<p>Create & Manage Customer Quotations</p>
+
+<hr>
+
+<form id="quotationForm">
+
+<select
+id="quotationCustomer"
+required>
+
+<option value="">
+👤 Select Customer
+</option>
+
+</select>
+
+<input
+type="date"
+id="quotationDate"
+required>
+
+<input
+type="text"
+id="quotationProduct"
+placeholder="📦 Product Name"
+required>
+
+<input
+type="number"
+id="quotationQuantity"
+placeholder="🔢 Quantity"
+min="1"
+required>
+
+<input
+type="number"
+id="quotationUnitPrice"
+placeholder="💰 Unit Price"
+min="0"
+step="0.01"
+required>
+
+<input
+type="number"
+id="quotationDiscount"
+placeholder="🎁 Discount"
+min="0"
+value="0">
+
+<input
+type="number"
+id="quotationTax"
+placeholder="🧾 GST / Tax"
+min="0"
+value="0">
+
+<input
+type="number"
+id="quotationTotal"
+placeholder="💵 Grand Total"
+readonly>
+
+<input
+type="date"
+id="validUntil">
+
+<select id="quotationStatus">
+
+<option value="Draft">
+📝 Draft
+</option>
+
+<option value="Sent">
+📤 Sent
+</option>
+
+<option value="Accepted">
+✅ Accepted
+</option>
+
+<option value="Rejected">
+❌ Rejected
+</option>
+
+</select>
+
+<textarea
+id="quotationTerms"
+rows="5"
+placeholder="📝 Terms & Conditions"></textarea>
+
+<br><br>
+
+<button
+type="submit"
+class="success-btn">
+
+💾 Save Quotation
+
+</button>
+
+</form>
+
+<hr>
+
+<h2>📄 Quotation List</h2>
+
+<input
+type="text"
+id="searchQuotation"
+class="search-box"
+placeholder="🔍 Search Quotation"
+onkeyup="searchQuotation()">
+
+<br><br>
+
+<h3>
+
+📄 Total Quotations :
+<span id="totalQuotations">0</span>
+
+</h3>
+
+<h3>
+
+💰 Total Quotation Value :
+<span id="totalQuotationValue">₹0.00</span>
+
+</h3>
+
+<br>
+
+<div id="quotationTable">
+
+<div class="list-card">
+
+<h3>📄 No Quotation Found</h3>
+
+<p>Create your first quotation.</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="button-group">
+
+<button
+type="button"
+class="primary-btn"
+onclick="refreshQuotations()">
+
+🔄 Refresh
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='customers.html'">
+
+👥 Customers
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='salesorder.html'">
+
+📄 Sales Orders
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='reports.html'">
+
+📊 Reports
+
+</button>
+
+<button
+type="button"
+class="success-btn"
+onclick="location.href='index.html'">
+
+🏠 Dashboard
+
+</button>
+
+</div>
+
+</div>
+
+<script src="common.js"></script>
+<script src="quotation.js"></script>
+
+</body>
+
+</html>

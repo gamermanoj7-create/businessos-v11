@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>BusinessOS - Attendance</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📅 Attendance Management</h1>
+
+<p>Manage Employee Attendance</p>
+
+<hr>
+
+<form id="attendanceForm">
+
+<select
+id="attendanceEmployee"
+required>
+
+<option value="">
+👤 Select Employee
+</option>
+
+</select>
+
+<input
+type="date"
+id="attendanceDate"
+required>
+
+<select
+id="attendanceStatus">
+
+<option value="Present">
+🟢 Present
+</option>
+
+<option value="Absent">
+🔴 Absent
+</option>
+
+<option value="Half Day">
+🟡 Half Day
+</option>
+
+<option value="Leave">
+🌴 Leave
+</option>
+
+</select>
+
+<input
+type="time"
+id="checkIn"
+placeholder="⏰ Check In">
+
+<input
+type="time"
+id="checkOut"
+placeholder="⏱️ Check Out">
+
+<textarea
+id="attendanceNotes"
+placeholder="📝 Notes"></textarea>
+
+<br><br>
+
+<button
+type="submit"
+class="success-btn">
+
+💾 Save Attendance
+
+</button>
+
+</form>
+
+<hr>
+
+<h2>📋 Attendance List</h2>
+
+<input
+type="text"
+id="searchAttendance"
+class="search-box"
+placeholder="🔍 Search Attendance"
+onkeyup="searchAttendance()">
+
+<br><br>
+
+<h3>
+
+📊 Total Records :
+<span id="totalAttendance">0</span>
+
+</h3>
+
+<br>
+
+<div id="attendanceTable">
+
+<div class="list-card">
+
+<h3>📅 No Attendance Found</h3>
+
+<p>Add your first attendance record.</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='index.html'">
+
+🏠 Back to Dashboard
+
+</button>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+
+<script src="firebase.js"></script>
+<script src="common.js"></script>
+<script src="attendance.js"></script>
+
+</body>
+
+</html>

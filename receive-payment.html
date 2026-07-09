@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BusinessOS | Receive Payment</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>💵 Receive Payment</h1>
+
+<p>Collect Customer Due Payments</p>
+
+<hr>
+
+<form id="paymentForm">
+
+<select
+id="paymentCustomer"
+required>
+
+<option value="">👤 Select Customer</option>
+
+</select>
+
+<input
+type="number"
+id="currentDue"
+placeholder="Current Due"
+readonly>
+
+<input
+type="number"
+id="paymentAmount"
+placeholder="Receive Amount"
+required>
+
+<input
+type="date"
+id="paymentDate"
+required>
+
+<input
+type="text"
+id="paymentNote"
+placeholder="Payment Note (Optional)">
+
+<button
+type="button"
+class="success-btn"
+onclick="receivePayment()">
+
+💵 Receive Payment
+
+</button>
+
+</form>
+
+<hr>
+
+<h2>💳 Payment History</h2>
+
+<input
+type="text"
+id="searchPayment"
+class="search-box"
+placeholder="🔍 Search Payment"
+onkeyup="searchPayment()">
+
+<br><br>
+
+<div id="paymentTable">
+
+<div class="list-card">
+
+<h3>💳 No Payment Found</h3>
+
+<p>No payment received yet.</p>
+
+</div>
+
+</div>
+
+<br>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='index.html'">
+
+🏠 Dashboard
+
+</button>
+
+</div>
+
+<script src="common.js"></script>
+<script src="receive-payment.js"></script>
+
+</body>
+
+</html>

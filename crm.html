@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>BusinessOS - CRM</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>👥 CRM Management</h1>
+
+<p>Customer Relationship Management</p>
+
+<hr>
+
+<form id="crmForm">
+
+<input
+type="text"
+id="leadName"
+placeholder="👤 Customer Name"
+required>
+
+<input
+type="text"
+id="leadCompany"
+placeholder="🏢 Company Name">
+
+<input
+type="tel"
+id="leadPhone"
+placeholder="📞 Phone Number"
+required>
+
+<input
+type="email"
+id="leadEmail"
+placeholder="📧 Email Address">
+
+<input
+type="tel"
+id="leadWhatsapp"
+placeholder="💬 WhatsApp Number">
+
+<input
+type="date"
+id="followUpDate">
+
+<select id="leadRating">
+
+<option value="⭐">⭐ 1 Star</option>
+
+<option value="⭐⭐">⭐⭐ 2 Stars</option>
+
+<option value="⭐⭐⭐" selected>⭐⭐⭐ 3 Stars</option>
+
+<option value="⭐⭐⭐⭐">⭐⭐⭐⭐ 4 Stars</option>
+
+<option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐ 5 Stars</option>
+
+</select>
+
+<select id="leadStatus">
+
+<option value="New">🆕 New</option>
+
+<option value="Contacted">📞 Contacted</option>
+
+<option value="Qualified">⭐ Qualified</option>
+
+<option value="Won">✅ Won</option>
+
+<option value="Lost">❌ Lost</option>
+
+</select>
+
+<textarea
+id="leadNotes"
+placeholder="📝 Notes"
+rows="4"></textarea>
+
+<br><br>
+
+<button
+type="submit"
+class="success-btn">
+
+💾 Save Lead
+
+</button>
+
+</form>
+
+<hr>
+
+<h2>👥 Lead List</h2>
+
+<input
+type="text"
+id="searchLead"
+class="search-box"
+placeholder="🔍 Search Lead"
+onkeyup="searchLead()">
+
+<br><br>
+
+<h3>
+
+👥 Total Leads :
+<span id="totalLeads">0</span>
+
+</h3>
+
+<br>
+
+<div id="leadTable">
+
+<div class="list-card">
+
+<h3>👥 No Lead Found</h3>
+
+<p>Add your first lead.</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="button-group">
+
+<button
+type="button"
+class="primary-btn"
+onclick="refreshLeads()">
+
+🔄 Refresh
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='customers.html'">
+
+👥 Customers
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='reports.html'">
+
+📊 Reports
+
+</button>
+
+<button
+type="button"
+class="success-btn"
+onclick="location.href='index.html'">
+
+🏠 Dashboard
+
+</button>
+
+</div>
+
+</div>
+
+<script src="common.js"></script>
+<script src="crm.js"></script>
+
+</body>
+
+</html>

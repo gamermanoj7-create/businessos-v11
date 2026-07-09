@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BusinessOS - Suppliers</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🏢 Supplier Management</h1>
+
+<p>Add, Edit & Manage Suppliers</p>
+
+<hr>
+
+<form id="supplierForm">
+
+<input
+type="text"
+id="supplierName"
+placeholder="🏢 Supplier Name"
+required>
+
+<input
+type="tel"
+id="supplierPhone"
+placeholder="📞 Phone Number"
+required>
+
+<input
+type="email"
+id="supplierEmail"
+placeholder="📧 Email Address">
+
+<input
+type="text"
+id="supplierAddress"
+placeholder="📍 Address">
+<select id="supplierStatus" required>
+    <option value="Active">🟢 Active</option>
+    <option value="Inactive">🔴 Inactive</option>
+</select>
+<input
+type="text"
+id="supplierGST"
+placeholder="🧾 GST Number">
+
+<button
+type="submit"
+class="success-btn">
+
+💾 Save Supplier
+
+</button>
+
+</form>
+
+<hr>
+
+<h2>🏢 Supplier List</h2>
+
+<input
+type="text"
+id="searchSupplier"
+class="search-box"
+placeholder="🔍 Search Supplier"
+onkeyup="searchSupplier()">
+
+<br><br>
+
+<h3>
+
+🏢 Total Suppliers :
+<span id="totalSuppliers">0</span>
+
+</h3>
+
+<br>
+
+<div id="supplierTable">
+
+<div class="list-card">
+
+<h3>🏢 No Supplier Found</h3>
+
+<p>Add your first supplier.</p>
+
+</div>
+
+</div>
+
+<br>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='index.html'">
+
+🏠 Dashboard
+
+</button>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<script src="firebase.js"></script>
+<script src="common.js"></script>
+<script src="suppliers.js"></script>
+
+</body>
+
+</html>

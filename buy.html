@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Buy Products | BusinessOS</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🛒 Purchase Management</h1>
+
+<p>Add & Manage Product Purchases</p>
+
+<hr>
+
+<form id="buyForm">
+
+<select id="buySupplier" required>
+
+<option value="">
+🏢 Select Supplier
+</option>
+
+</select>
+
+<select id="buyProduct" required>
+
+<option value="">
+📦 Select Product
+</option>
+
+</select>
+
+<input
+type="number"
+id="buyQty"
+placeholder="📦 Quantity"
+min="1"
+required>
+
+<input
+type="number"
+id="buyPrice"
+placeholder="💰 Buy Price"
+readonly>
+
+<input
+type="number"
+id="buyTotal"
+placeholder="💵 Total Amount"
+readonly>
+
+<button
+type="button"
+class="primary-btn"
+onclick="addBuyItem()">
+
+➕ Add Product
+
+</button>
+
+</form>
+
+<hr>
+
+<h2>📦 Purchase Items</h2>
+
+<div id="buyItems">
+
+<div class="list-card">
+
+<h3>📦 No Product Added</h3>
+
+<p>Add products to purchase.</p>
+
+</div>
+
+</div>
+
+<br>
+
+<input
+type="number"
+id="buyGrandTotal"
+placeholder="💰 Grand Total"
+readonly>
+
+<br><br>
+
+<button
+type="submit"
+form="buyForm"
+class="success-btn">
+
+💾 Save Purchase
+
+</button>
+
+<hr>
+
+<h2>📋 Purchase History</h2>
+
+<input
+type="text"
+id="searchPurchase"
+class="search-box"
+placeholder="🔍 Search Purchase"
+onkeyup="searchPurchase()">
+
+<br><br>
+
+<div id="purchaseHistory">
+
+<div class="list-card">
+
+<h3>🧾 No Purchase Found</h3>
+
+<p>Purchase History Empty</p>
+
+</div>
+
+</div>
+
+<br>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='index.html'">
+
+🏠 Dashboard
+
+</button>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<script src="firebase.js"></script>
+<script src="common.js"></script>
+<script src="buy.js"></script>
+
+</body>
+
+</html>

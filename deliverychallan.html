@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BusinessOS - Delivery Challan</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🚚 Delivery Challan</h1>
+
+<p>Create & Manage Delivery Challans</p>
+
+<hr>
+
+<form id="deliveryChallanForm">
+
+<select
+id="dcCustomer"
+required>
+
+<option value="">
+👤 Select Customer
+</option>
+
+</select>
+
+<input
+type="date"
+id="dcDate"
+required>
+
+<input
+type="text"
+id="dcProduct"
+placeholder="📦 Product Name"
+required>
+
+<input
+type="number"
+id="dcQuantity"
+placeholder="🔢 Quantity"
+min="1"
+required>
+
+<input
+type="text"
+id="dcVehicle"
+placeholder="🚛 Vehicle Number">
+
+<input
+type="text"
+id="dcDriver"
+placeholder="👨 Driver Name">
+
+<textarea
+id="dcAddress"
+rows="3"
+placeholder="📍 Delivery Address"></textarea>
+
+<input
+type="date"
+id="dcDeliveryDate">
+
+<select id="dcStatus">
+
+<option value="Pending">
+🟡 Pending
+</option>
+
+<option value="Out for Delivery">
+🚚 Out for Delivery
+</option>
+
+<option value="Delivered">
+✅ Delivered
+</option>
+
+<option value="Returned">
+↩️ Returned
+</option>
+
+</select>
+
+<textarea
+id="dcNotes"
+rows="4"
+placeholder="📝 Notes"></textarea>
+
+<br><br>
+
+<button
+type="submit"
+class="success-btn">
+
+💾 Save Challan
+
+</button>
+
+</form>
+
+<hr>
+
+<h2>🚚 Delivery Challan List</h2>
+
+<input
+type="text"
+id="searchDeliveryChallan"
+class="search-box"
+placeholder="🔍 Search Delivery Challan"
+onkeyup="searchDeliveryChallan()">
+
+<br><br>
+
+<h3>
+
+🚚 Total Challans :
+<span id="totalDeliveryChallans">0</span>
+
+</h3>
+
+<br>
+
+<div id="deliveryChallanTable">
+
+<div class="list-card">
+
+<h3>🚚 No Delivery Challan Found</h3>
+
+<p>Create your first Delivery Challan.</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="button-group">
+
+<button
+type="button"
+class="primary-btn"
+onclick="refreshDeliveryChallans()">
+
+🔄 Refresh
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='customers.html'">
+
+👥 Customers
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='invoice.html'">
+
+📄 Invoice
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='reports.html'">
+
+📊 Reports
+
+</button>
+
+<button
+type="button"
+class="success-btn"
+onclick="location.href='index.html'">
+
+🏠 Dashboard
+
+</button>
+
+</div>
+
+</div>
+
+<script src="common.js"></script>
+<script src="deliverychallan.js"></script>
+
+</body>
+
+</html>

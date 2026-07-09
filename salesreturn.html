@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BusinessOS - Sales Return</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📥 Sales Return</h1>
+
+<p>Manage Customer Sales Returns</p>
+
+<hr>
+
+<form id="salesReturnForm">
+
+<select
+id="srSalesOrder"
+required>
+
+<option value="">
+📄 Select Sales Order
+</option>
+
+</select>
+
+<input
+type="number"
+id="srQuantity"
+placeholder="🔢 Return Quantity"
+min="1"
+required>
+
+<input
+type="text"
+id="srReason"
+placeholder="❌ Return Reason"
+required>
+
+<input
+type="number"
+id="srRefund"
+placeholder="💰 Refund Amount"
+min="0"
+step="0.01"
+value="0">
+
+<input
+type="date"
+id="srDate"
+required>
+
+<select
+id="srStatus">
+
+<option value="Pending">
+🟡 Pending
+</option>
+
+<option value="Approved">
+📋 Approved
+</option>
+
+<option value="Refunded">
+💰 Refunded
+</option>
+
+</select>
+
+<textarea
+id="srNotes"
+rows="4"
+placeholder="📝 Notes"></textarea>
+
+<br><br>
+
+<button
+type="submit"
+class="success-btn">
+
+💾 Save Sales Return
+
+</button>
+
+</form>
+
+<hr>
+
+<h2>📥 Sales Return List</h2>
+
+<input
+type="text"
+id="searchSalesReturn"
+class="search-box"
+placeholder="🔍 Search Sales Return"
+onkeyup="searchSalesReturn()">
+
+<br><br>
+
+<h3>
+
+📥 Total Sales Returns :
+<span id="totalSalesReturns">0</span>
+
+</h3>
+
+<h3>
+
+💰 Total Refund :
+<span id="totalRefundAmount">₹0.00</span>
+
+</h3>
+
+<br>
+
+<div id="salesReturnTable">
+
+<div class="list-card">
+
+<h3>📥 No Sales Return Found</h3>
+
+<p>Create your first Sales Return.</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="button-group">
+
+<button
+type="button"
+class="primary-btn"
+onclick="refreshSalesReturns()">
+
+🔄 Refresh
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='salesorder.html'">
+
+📄 Sales Orders
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='inventory.html'">
+
+📦 Inventory
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='reports.html'">
+
+📊 Reports
+
+</button>
+
+<button
+type="button"
+class="success-btn"
+onclick="location.href='index.html'">
+
+🏠 Dashboard
+
+</button>
+
+</div>
+
+</div>
+
+<script src="common.js"></script>
+<script src="salesreturn.js"></script>
+
+</body>
+
+</html>

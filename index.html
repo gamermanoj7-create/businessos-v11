@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BusinessOS V11 Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#000000">
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="login-card">
+
+<h1>🏢 BusinessOS V11</h1>
+
+<p>Professional ERP & Accounting Software</p>
+
+<hr>
+
+<div class="dashboard-grid">
+
+<div class="dashboard-card">
+<h3>💰 Today's Sales</h3>
+<h2 id="todaySales">₹0.00</h2>
+</div>
+
+<div class="dashboard-card">
+<h3>📈 Today's Profit</h3>
+<h2 id="todayProfit">₹0.00</h2>
+</div>
+
+<div class="dashboard-card">
+<h3>🛒 Today's Purchase</h3>
+<h2 id="todayPurchase">₹0.00</h2>
+</div>
+
+<div class="dashboard-card">
+<h3>📦 Total Products</h3>
+<h2 id="totalProducts">0</h2>
+</div>
+
+<div class="dashboard-card">
+<h3>📦 Total Stock</h3>
+<h2 id="totalStock">0</h2>
+</div>
+
+<div class="dashboard-card">
+<h3>⚠️ Low Stock</h3>
+<h2 id="lowStock">0</h2>
+</div>
+
+<div class="dashboard-card">
+<h3>💸 Total Expenses</h3>
+<h2 id="totalExpenses">₹0.00</h2>
+</div>
+
+<div class="dashboard-card">
+<h3>👤 Total Due</h3>
+<h2 id="totalDue">₹0.00</h2>
+</div>
+
+<div class="dashboard-card">
+<h3>✅ Paid Amount</h3>
+<h2 id="paidAmount">₹0.00</h2>
+</div>
+
+<div class="dashboard-card">
+<h3>⏳ Remaining Due</h3>
+<h2 id="remainingDue">₹0.00</h2>
+</div>
+
+</div>
+
+<hr>
+
+<div class="button-group">
+<button class="success-btn"
+onclick="location.href='login.html'">
+🔓 Login
+</button>
+
+<button class="primary-btn"
+onclick="location.href='register.html'">
+📝 Register
+</button>
+
+<button class="primary-btn"
+onclick="location.href='sell.html'">
+💰 Sell
+</button>
+
+<button class="primary-btn"
+onclick="location.href='buy.html'">
+🛒 Buy
+</button>
+
+<button class="primary-btn"
+onclick="location.href='products.html'">
+📦 Products
+</button>
+
+<button class="primary-btn"
+onclick="location.href='customers.html'">
+👥 Customers
+</button>
+
+<button class="primary-btn"
+onclick="location.href='suppliers.html'">
+🏭 Suppliers
+</button>
+
+<button class="primary-btn"
+onclick="location.href='inventory.html'">
+📋 Inventory
+</button>
+
+<button class="primary-btn"
+onclick="location.href='receive-payment.html'">
+💵 Receive Payment
+</button>
+
+<button class="primary-btn"
+onclick="location.href='expenses.html'">
+💸 Expenses
+</button>
+
+<button class="primary-btn"
+onclick="location.href='reports.html'">
+📊 Reports
+</button>
+
+<button class="primary-btn"
+onclick="location.href='invoice.html'">
+🧾 Invoice
+</button>
+
+<button class="primary-btn"
+onclick="location.href='analytics.html'">
+📈 Analytics
+</button>
+
+<button class="primary-btn"
+onclick="location.href='cashflow.html'">
+💵 Cash Flow
+</button>
+
+<button class="primary-btn"
+onclick="location.href='profitloss.html'">
+📊 Profit & Loss
+</button>
+
+<button class="primary-btn"
+onclick="location.href='balancesheet.html'">
+📑 Balance Sheet
+</button>
+
+<button class="primary-btn"
+onclick="location.href='profile.html'">
+👤 Profile
+</button>
+
+<button class="primary-btn"
+onclick="location.href='users.html'">
+👥 Users
+</button>
+
+<button class="primary-btn"
+onclick="location.href='settings.html'">
+⚙️ Settings
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+
+<script src="firebase.js"></script>
+<script src="common.js"></script>
+<script src="dashboard.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+        navigator.serviceWorker.register("./sw.js")
+        .then(function () {
+            console.log("Service Worker Registered");
+        })
+        .catch(function (err) {
+            console.log("Service Worker Error", err);
+        });
+    });
+}
+</script>
+<script>
+firebase.auth().onAuthStateChanged(function(user){
+
+    if(!user){
+
+        window.location.href = "login.html";
+
+    }
+
+});
+</script>
+</body>
+
+</html>

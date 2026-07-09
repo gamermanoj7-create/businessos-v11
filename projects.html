@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>BusinessOS - Projects</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📋 Project Management</h1>
+
+<p>Manage Business Projects & Orders</p>
+
+<hr>
+
+<form id="projectForm">
+
+<input
+type="text"
+id="projectName"
+placeholder="📋 Project Name"
+required>
+
+<select
+id="projectCustomer">
+
+<option value="">
+👤 Select Customer
+</option>
+
+</select>
+
+<select
+id="projectEmployee">
+
+<option value="">
+👨‍💼 Assign Employee
+</option>
+
+</select>
+
+<input
+type="text"
+id="projectProduct"
+placeholder="📦 Product Name">
+
+<input
+type="date"
+id="startDate">
+
+<input
+type="date"
+id="dueDate">
+
+<select
+id="projectPriority">
+
+<option value="Low">
+🟢 Low
+</option>
+
+<option value="Medium">
+🟡 Medium
+</option>
+
+<option value="High">
+🔴 High
+</option>
+
+</select>
+
+<select
+id="projectStatus">
+
+<option value="Pending">
+📋 Pending
+</option>
+
+<option value="In Progress">
+🚧 In Progress
+</option>
+
+<option value="Completed">
+✅ Completed
+</option>
+
+<option value="Cancelled">
+❌ Cancelled
+</option>
+
+</select>
+
+<input
+type="number"
+id="projectBudget"
+placeholder="💰 Project Budget"
+min="0"
+value="0">
+
+<label>
+
+📈 Progress (%)
+
+</label>
+
+<input
+type="range"
+id="projectProgress"
+min="0"
+max="100"
+value="0"
+oninput="document.getElementById('progressValue').textContent=this.value+'%'">
+
+<p>
+
+Progress :
+<strong id="progressValue">0%</strong>
+
+</p>
+
+<textarea
+id="projectNotes"
+placeholder="📝 Project Notes"
+rows="4"></textarea>
+
+<br><br>
+
+<button
+type="submit"
+class="success-btn">
+
+💾 Save Project
+
+</button>
+
+</form>
+
+<hr>
+
+<h2>📋 Project List</h2>
+
+<input
+type="text"
+id="searchProject"
+class="search-box"
+placeholder="🔍 Search Project"
+onkeyup="searchProject()">
+
+<br><br>
+
+<h3>
+
+📊 Total Projects :
+<span id="totalProjects">0</span>
+
+</h3>
+
+<br>
+
+<div id="projectTable">
+
+<div class="list-card">
+
+<h3>📋 No Project Found</h3>
+
+<p>Add your first project.</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="button-group">
+
+<button
+type="button"
+class="primary-btn"
+onclick="refreshProjects()">
+
+🔄 Refresh
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='customers.html'">
+
+👥 Customers
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='staff.html'">
+
+👨‍💼 Staff
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='reports.html'">
+
+📊 Reports
+
+</button>
+
+<button
+type="button"
+class="success-btn"
+onclick="location.href='index.html'">
+
+🏠 Dashboard
+
+</button>
+
+</div>
+
+</div>
+
+<script src="common.js"></script>
+<script src="projects.js"></script>
+
+</body>
+
+</html>

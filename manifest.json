@@ -1,0 +1,37 @@
+{
+  "id": "/businessos-v11/",
+  "name": "BusinessOS V11",
+  "short_name": "BusinessOS",
+  "description": "Complete Business Management ERP for Inventory, Sales, Purchase, Invoice and Accounts.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait",
+
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+
+  "screenshots": [
+    {
+      "src": "splash.png",
+      "sizes": "1080x1080",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "BusinessOS V11 Splash Screen"
+    }
+  ]
+}

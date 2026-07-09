@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>BusinessOS - Staff</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>👨‍💼 Staff Management</h1>
+
+<p>Add, Edit & Manage Employees</p>
+
+<hr>
+
+<form id="employeeForm">
+
+<input
+type="text"
+id="employeeName"
+placeholder="👤 Employee Name"
+required>
+
+<input
+type="tel"
+id="employeePhone"
+placeholder="📞 Phone Number"
+required>
+
+<input
+type="email"
+id="employeeEmail"
+placeholder="📧 Email Address">
+
+<input
+type="text"
+id="employeeDesignation"
+placeholder="💼 Designation"
+required>
+
+<input
+type="number"
+id="employeeSalary"
+placeholder="💰 Monthly Salary"
+min="0">
+
+<input
+type="date"
+id="joiningDate">
+
+<select id="employeeStatus">
+
+<option value="Active">
+🟢 Active
+</option>
+
+<option value="Inactive">
+🔴 Inactive
+</option>
+
+</select>
+
+<br><br>
+
+<button
+type="submit"
+class="success-btn">
+
+💾 Save Employee
+
+</button>
+
+</form>
+
+<hr>
+
+<h2>👨‍💼 Employee List</h2>
+
+<input
+type="text"
+id="searchEmployee"
+class="search-box"
+placeholder="🔍 Search Employee"
+onkeyup="searchEmployee()">
+
+<br><br>
+
+<h3>
+
+👥 Total Employees :
+<span id="totalEmployees">0</span>
+
+</h3>
+
+<br>
+
+<div id="employeeTable">
+
+<div class="list-card">
+
+<h3>👨‍💼 No Employee Found</h3>
+
+<p>Add your first employee.</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='index.html'">
+
+🏠 Back to Dashboard
+
+</button>
+
+</div>
+
+<script src="common.js"></script>
+<script src="staff.js"></script>
+
+</body>
+
+</html>

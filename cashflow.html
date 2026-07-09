@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BusinessOS - Cash Flow Statement</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>💰 Cash Flow Statement</h1>
+
+<p>Business Cash Flow Report</p>
+
+<hr>
+
+<h2>📅 Date Filter</h2>
+
+<input
+type="date"
+id="fromDate">
+
+<input
+type="date"
+id="toDate">
+
+<br><br>
+
+<button
+class="primary-btn"
+onclick="filterCashFlow()">
+
+🔍 Filter Cash Flow
+
+</button>
+
+<hr>
+
+<div class="list-card">
+
+<div class="list-item">
+
+<span class="list-label">
+
+💵 Opening Cash
+
+</span>
+
+<span
+id="openingCash"
+class="list-value">
+
+₹0.00
+
+</span>
+
+</div>
+
+<div class="list-item">
+
+<span class="list-label">
+
+💰 Cash In
+
+</span>
+
+<span
+id="cashIn"
+class="list-value">
+
+₹0.00
+
+</span>
+
+</div>
+
+<div class="list-item">
+
+<span class="list-label">
+
+💸 Cash Out
+
+</span>
+
+<span
+id="cashOut"
+class="list-value">
+
+₹0.00
+
+</span>
+
+</div>
+
+<div class="list-item">
+
+<span class="list-label">
+
+🏦 Bank In
+
+</span>
+
+<span
+id="bankIn"
+class="list-value">
+
+₹0.00
+
+</span>
+
+</div>
+
+<div class="list-item">
+
+<span class="list-label">
+
+🏦 Bank Out
+
+</span>
+
+<span
+id="bankOut"
+class="list-value">
+
+₹0.00
+
+</span>
+
+</div>
+
+<div class="list-item">
+
+<span class="list-label">
+
+📈 Net Cash Flow
+
+</span>
+
+<span
+id="netCashFlow"
+class="list-value">
+
+₹0.00
+
+</span>
+
+</div>
+
+<div class="list-item">
+
+<span class="list-label">
+
+💼 Closing Cash
+
+</span>
+
+<span
+id="closingCash"
+class="list-value">
+
+₹0.00
+
+</span>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="button-group">
+
+<button
+type="button"
+class="primary-btn"
+onclick="showCashFlowSummary()">
+
+📊 Summary
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="operatingActivities()">
+
+🏢 Operating
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="investingActivities()">
+
+📈 Investing
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="financingActivities()">
+
+💳 Financing
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="cashFlowReport()">
+
+📑 Report
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="cashFlowPerformance()">
+
+📈 Performance
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="printCashFlow()">
+
+🖨️ Print
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="exportCashFlowPDF()">
+
+📄 Export PDF
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="exportCashFlowExcel()">
+
+📊 Export Excel
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="refreshCashFlow()">
+
+🔄 Refresh
+
+</button>
+
+<button
+type="button"
+class="success-btn"
+onclick="location.href='reports.html'">
+
+📊 Reports
+
+</button>
+
+<button
+type="button"
+class="success-btn"
+onclick="location.href='index.html'">
+
+🏠 Dashboard
+
+</button>
+
+</div>
+
+</div>
+
+<script src="common.js"></script>
+<script src="cashflow.js"></script>
+
+</body>
+
+</html>

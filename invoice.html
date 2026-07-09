@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Invoice | BusinessOS</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🧾 Invoice Management</h1>
+
+<p>Create & Manage Business Invoices</p>
+
+<hr>
+
+<form id="invoiceForm">
+
+<input
+type="text"
+id="invoiceNo"
+placeholder="Invoice Number"
+readonly>
+
+<input
+type="date"
+id="invoiceDate">
+
+<select
+id="customerName"
+required>
+
+<option value="">
+👤 Select Customer
+</option>
+
+</select>
+
+<input
+type="tel"
+id="customerPhone"
+placeholder="📞 Customer Phone">
+
+<input
+type="text"
+id="customerAddress"
+placeholder="📍 Customer Address">
+
+<select id="paymentStatus">
+
+<option value="Paid">
+✅ Paid
+</option>
+
+<option value="Partial">
+🟡 Partial
+</option>
+
+<option value="Due">
+🔴 Due
+</option>
+
+</select>
+
+<hr>
+
+<h2>📦 Add Product</h2>
+
+<select id="invoiceProduct">
+
+<option value="">
+📦 Select Product
+</option>
+
+</select>
+
+<input
+type="number"
+id="invoiceQty"
+placeholder="📦 Quantity"
+min="1">
+
+<input
+type="number"
+id="invoicePrice"
+placeholder="💰 Selling Price"
+readonly>
+
+<button
+type="button"
+class="primary-btn"
+onclick="addProduct()">
+
+➕ Add Product
+
+</button>
+
+</form>
+
+<hr>
+
+<h2>🛒 Invoice Items</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Product</th>
+<th>Qty</th>
+<th>Price</th>
+<th>Total</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="invoiceItems">
+
+<tr>
+
+<td colspan="5">
+
+No Product Added
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<br>
+
+<input
+type="number"
+id="discount"
+placeholder="🎁 Discount (%)"
+value="0">
+
+<input
+type="number"
+id="invoiceTotal"
+placeholder="💰 Grand Total"
+readonly>
+
+<br><br>
+
+<button
+type="button"
+class="success-btn"
+onclick="generateInvoice()">
+
+💾 Save Invoice
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="newInvoice()">
+
+🆕 New Invoice
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="printInvoice()">
+
+🖨️ Print
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="downloadPDF()">
+
+📄 Download PDF
+
+</button>
+
+<hr>
+
+<h2>👁️ Invoice Preview</h2>
+
+<div id="invoicePreview">
+
+<p>
+
+<b>Invoice :</b>
+
+<span id="showInvoiceNo"></span>
+
+</p>
+
+<p>
+
+<b>Date :</b>
+
+<span id="showDate"></span>
+
+</p>
+
+<p>
+
+<b>Customer :</b>
+
+<span id="showCustomer"></span>
+
+</p>
+
+<p>
+
+<b>Phone :</b>
+
+<span id="showPhone"></span>
+
+</p>
+
+<p>
+
+<b>Address :</b>
+
+<span id="showAddress"></span>
+
+</p>
+
+<p>
+
+<b>Status :</b>
+
+<span id="showStatus"></span>
+
+</p>
+
+<hr>
+
+<div id="previewItems">
+
+No Items
+
+</div>
+
+<hr>
+
+<h2>
+
+Grand Total :
+₹<span id="showTotal">0.00</span>
+
+</h2>
+
+</div>
+
+<hr>
+
+<h2>📋 Invoice History</h2>
+
+<input
+type="text"
+id="searchInvoice"
+class="search-box"
+placeholder="🔍 Search Invoice"
+onkeyup="searchInvoice()">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Invoice</th>
+<th>Date</th>
+<th>Customer</th>
+<th>Status</th>
+<th>Total</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="invoiceHistory">
+
+<tr>
+
+<td colspan="6">
+
+No Invoice Found
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<br>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='index.html'">
+
+🏠 Dashboard
+
+</button>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<script src="firebase.js"></script>
+<script src="common.js"></script>
+<script src="invoice.js"></script>
+
+</body>
+
+</html>

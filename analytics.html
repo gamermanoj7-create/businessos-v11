@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BusinessOS - Analytics Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📊 Analytics Dashboard</h1>
+
+<p>Business Performance Overview</p>
+
+<hr>
+
+<div class="dashboard-grid">
+
+<div class="dashboard-card">
+<h3>💰 Total Sales</h3>
+<h2 id="analyticsSales">₹0.00</h2>
+</div>
+
+<div class="dashboard-card">
+<h3>🛒 Total Purchase</h3>
+<h2 id="analyticsPurchase">₹0.00</h2>
+</div>
+
+<div class="dashboard-card">
+<h3>💸 Total Expenses</h3>
+<h2 id="analyticsExpense">₹0.00</h2>
+</div>
+
+<div class="dashboard-card">
+<h3>📈 Net Profit</h3>
+<h2 id="analyticsProfit">₹0.00</h2>
+</div>
+
+<div class="dashboard-card">
+<h3>💵 Cash Balance</h3>
+<h2 id="analyticsCash">₹0.00</h2>
+</div>
+
+<div class="dashboard-card">
+<h3>🏦 Bank Balance</h3>
+<h2 id="analyticsBank">₹0.00</h2>
+</div>
+
+<div class="dashboard-card">
+<h3>📦 Inventory Qty</h3>
+<h2 id="analyticsInventory">0</h2>
+</div>
+
+<div class="dashboard-card">
+<h3>📦 Products</h3>
+<h2 id="analyticsProducts">0</h2>
+</div>
+
+<div class="dashboard-card">
+<h3>👥 Customers</h3>
+<h2 id="analyticsCustomers">0</h2>
+</div>
+
+<div class="dashboard-card">
+<h3>🏢 Suppliers</h3>
+<h2 id="analyticsSuppliers">0</h2>
+</div>
+
+</div>
+
+<hr>
+
+<h2>📈 Sales Analytics</h2>
+
+<div class="dashboard-grid">
+
+<div class="dashboard-card">
+<h3>📅 Today Sales</h3>
+<h2 id="todaySales">₹0.00</h2>
+</div>
+
+<div class="dashboard-card">
+<h3>🗓️ Monthly Sales</h3>
+<h2 id="monthlySales">₹0.00</h2>
+</div>
+
+<div class="dashboard-card">
+<h3>📆 Yearly Sales</h3>
+<h2 id="yearlySales">₹0.00</h2>
+</div>
+
+<div class="dashboard-card">
+<h3>📉 Low Stock</h3>
+<h2 id="lowStock">0</h2>
+</div>
+
+<div class="dashboard-card">
+<h3>📋 Pending PO</h3>
+<h2 id="pendingPO">0</h2>
+</div>
+
+<div class="dashboard-card">
+<h3>🏆 Business Status</h3>
+<h2 id="businessStatus">-</h2>
+</div>
+
+</div>
+
+<hr>
+
+<h2>🏆 Top Lists</h2>
+
+<div class="dashboard-grid">
+
+<div class="list-card">
+
+<h3>📦 Top Selling Products</h3>
+
+<ul id="topProducts">
+
+<li>No Data</li>
+
+</ul>
+
+</div>
+
+<div class="list-card">
+
+<h3>👥 Top Customers</h3>
+
+<ul id="topCustomers">
+
+<li>No Data</li>
+
+</ul>
+
+</div>
+
+<div class="list-card">
+
+<h3>🏢 Top Suppliers</h3>
+
+<ul id="topSuppliers">
+
+<li>No Data</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="list-card">
+
+<div class="list-item">
+
+<span class="list-label">
+
+📦 Total Inventory Stock
+
+</span>
+
+<span
+id="inventoryStock"
+class="list-value">
+
+0
+
+</span>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="button-group">
+
+<button
+class="primary-btn"
+onclick="businessSummary()">
+
+📊 Summary
+
+</button>
+
+<button
+class="primary-btn"
+onclick="refreshAnalytics()">
+
+🔄 Refresh
+
+</button>
+
+<button
+class="primary-btn"
+onclick="location.href='reports.html'">
+
+📊 Reports
+
+</button>
+
+<button
+class="success-btn"
+onclick="location.href='index.html'">
+
+🏠 Dashboard
+
+</button>
+
+</div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+
+<script src="firebase.js"></script>
+<script src="common.js"></script>
+<script src="analytics.js"></script>
+
+</body>
+
+</html>

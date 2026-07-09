@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>BusinessOS - Salary</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>💰 Salary Management</h1>
+
+<p>Manage Employee Salary Records</p>
+
+<hr>
+
+<form id="salaryForm">
+
+<select
+id="salaryEmployee"
+required>
+
+<option value="">
+👤 Select Employee
+</option>
+
+</select>
+
+<input
+type="month"
+id="salaryMonth"
+required>
+
+<input
+type="number"
+id="salaryAmount"
+placeholder="💰 Basic Salary"
+readonly>
+
+<input
+type="number"
+id="bonus"
+placeholder="🎁 Bonus"
+value="0">
+
+<input
+type="number"
+id="deduction"
+placeholder="➖ Deduction"
+value="0">
+
+<input
+type="number"
+id="netSalary"
+placeholder="💵 Net Salary"
+readonly>
+
+<select
+id="paymentMethod">
+
+<option value="Cash">
+💵 Cash
+</option>
+
+<option value="Bank">
+🏦 Bank Transfer
+</option>
+
+<option value="UPI">
+📱 UPI
+</option>
+
+<option value="Cheque">
+🧾 Cheque
+</option>
+
+</select>
+
+<select
+id="salaryStatus">
+
+<option value="Paid">
+✅ Paid
+</option>
+
+<option value="Unpaid">
+❌ Unpaid
+</option>
+
+</select>
+
+<br><br>
+
+<button
+type="submit"
+class="success-btn">
+
+💾 Save Salary
+
+</button>
+
+</form>
+
+<hr>
+
+<h2>💰 Salary Records</h2>
+
+<input
+type="text"
+id="searchSalary"
+class="search-box"
+placeholder="🔍 Search Salary"
+onkeyup="searchSalary()">
+
+<br><br>
+
+<h3>
+
+📊 Total Records :
+<span id="totalSalaryRecords">0</span>
+
+</h3>
+
+<br>
+
+<div id="salaryTable">
+
+<div class="list-card">
+
+<h3>💰 No Salary Record Found</h3>
+
+<p>Add your first salary record.</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="button-group">
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='index.html'">
+
+🏠 Dashboard
+
+</button>
+
+</div>
+
+</div>
+
+<script src="common.js"></script>
+<script src="salary.js"></script>
+
+</body>
+
+</html>

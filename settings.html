@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>BusinessOS - Settings</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>⚙️ Business Settings</h1>
+
+<p>Manage Your Business Information</p>
+
+<hr>
+
+<form id="settingsForm">
+
+<h2>🏢 Business Information</h2>
+
+<input
+type="text"
+id="businessName"
+placeholder="🏢 Business Name"
+required>
+
+<input
+type="text"
+id="ownerName"
+placeholder="👤 Owner Name">
+
+<input
+type="tel"
+id="phone"
+placeholder="📞 Phone Number">
+
+<input
+type="email"
+id="email"
+placeholder="📧 Email Address">
+
+<textarea
+id="address"
+placeholder="📍 Business Address"></textarea>
+
+<input
+type="text"
+id="website"
+placeholder="🌐 Website">
+
+<input
+type="text"
+id="gst"
+placeholder="🧾 GST Number">
+
+<hr>
+
+<h2>🖼️ Business Logo</h2>
+
+<input
+type="file"
+id="logo"
+accept="image/*"
+onchange="previewLogo(event)">
+
+<br><br>
+
+<img
+id="logoPreview"
+src=""
+alt="Logo Preview"
+style="
+width:120px;
+height:120px;
+object-fit:contain;
+border:1px solid #ccc;
+border-radius:10px;
+">
+
+<hr>
+
+<h2>🎨 Appearance</h2>
+
+<select id="theme">
+
+<option value="light">
+☀️ Light Mode
+</option>
+
+<option value="dark">
+🌙 Dark Mode
+</option>
+
+</select>
+
+<select id="currency">
+
+<option value="₹">
+₹ Indian Rupee
+</option>
+
+<option value="$">
+$ US Dollar
+</option>
+
+<option value="৳">
+৳ Bangladeshi Taka
+</option>
+
+<option value="€">
+€ Euro
+</option>
+
+<option value="£">
+£ Pound
+</option>
+
+</select>
+
+<br><br>
+
+<button
+type="submit"
+class="success-btn">
+
+💾 Save Settings
+
+</button>
+
+<hr>
+
+<h2>💾 Backup & Restore</h2>
+
+<div class="button-group">
+
+<button
+type="button"
+class="primary-btn"
+onclick="backupData()">
+
+📥 Backup JSON
+
+</button>
+
+<label
+class="primary-btn"
+for="restoreFile">
+
+📂 Restore JSON
+
+</label>
+
+<input
+type="file"
+id="restoreFile"
+accept=".json"
+style="display:none"
+onchange="restoreData(event)">
+
+<button
+type="button"
+class="warning-btn"
+onclick="resetSettings()">
+
+🔄 Reset Settings
+
+</button>
+
+<button
+type="button"
+class="danger-btn"
+onclick="clearAllData()">
+
+🗑️ Clear All Data
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>👁️ Business Preview</h2>
+
+<div class="list-card">
+
+<h3 id="previewBusinessName">
+Business Name
+</h3>
+
+<p>
+
+<b>Owner:</b>
+
+<span id="previewOwner">-</span>
+
+</p>
+
+<p>
+
+<b>Phone:</b>
+
+<span id="previewPhone">-</span>
+
+</p>
+
+<p>
+
+<b>Email:</b>
+
+<span id="previewEmail">-</span>
+
+</p>
+
+<p>
+
+<b>Address:</b>
+
+<span id="previewAddress">-</span>
+
+</p>
+
+<p>
+
+<b>Website:</b>
+
+<span id="previewWebsite">-</span>
+
+</p>
+
+<p>
+
+<b>GST:</b>
+
+<span id="previewGST">-</span>
+
+</p>
+
+</div>
+
+<hr>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='index.html'">
+
+🏠 Back to Dashboard
+
+</button>
+
+</form>
+
+</div>
+
+<script src="common.js"></script>
+<script src="settings.js"></script>
+
+</body>
+
+</html>

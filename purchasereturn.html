@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BusinessOS - Purchase Return</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📤 Purchase Return</h1>
+
+<p>Manage Supplier Purchase Returns</p>
+
+<hr>
+
+<form id="purchaseReturnForm">
+
+<select
+id="prGRN"
+required>
+
+<option value="">
+📥 Select GRN
+</option>
+
+</select>
+
+<input
+type="number"
+id="prQuantity"
+placeholder="🔢 Return Quantity"
+min="1"
+required>
+
+<input
+type="text"
+id="prReason"
+placeholder="❌ Return Reason"
+required>
+
+<input
+type="date"
+id="prDate"
+required>
+
+<select
+id="prStatus">
+
+<option value="Pending">
+🟡 Pending
+</option>
+
+<option value="Approved">
+📋 Approved
+</option>
+
+<option value="Completed">
+✅ Completed
+</option>
+
+</select>
+
+<textarea
+id="prNotes"
+rows="4"
+placeholder="📝 Notes"></textarea>
+
+<br><br>
+
+<button
+type="submit"
+class="success-btn">
+
+💾 Save Purchase Return
+
+</button>
+
+</form>
+
+<hr>
+
+<h2>📤 Purchase Return List</h2>
+
+<input
+type="text"
+id="searchPurchaseReturn"
+class="search-box"
+placeholder="🔍 Search Purchase Return"
+onkeyup="searchPurchaseReturn()">
+
+<br><br>
+
+<h3>
+
+📤 Total Purchase Returns :
+<span id="totalPurchaseReturns">0</span>
+
+</h3>
+
+<br>
+
+<div id="purchaseReturnTable">
+
+<div class="list-card">
+
+<h3>📤 No Purchase Return Found</h3>
+
+<p>Create your first Purchase Return.</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="button-group">
+
+<button
+type="button"
+class="primary-btn"
+onclick="refreshPurchaseReturns()">
+
+🔄 Refresh
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='grn.html'">
+
+📥 GRN
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='inventory.html'">
+
+📦 Inventory
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='reports.html'">
+
+📊 Reports
+
+</button>
+
+<button
+type="button"
+class="success-btn"
+onclick="location.href='index.html'">
+
+🏠 Dashboard
+
+</button>
+
+</div>
+
+</div>
+
+<script src="common.js"></script>
+<script src="purchasereturn.js"></script>
+
+</body>
+
+</html>

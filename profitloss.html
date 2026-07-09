@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>BusinessOS - Profit & Loss</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📈 Profit & Loss Report</h1>
+
+<p>Business Financial Summary</p>
+
+<hr>
+
+<h2>📅 Report Filter</h2>
+
+<input
+type="date"
+id="fromDate">
+
+<input
+type="date"
+id="toDate">
+
+<br><br>
+
+<button
+class="primary-btn"
+onclick="filterReport()">
+
+🔍 Filter Report
+
+</button>
+
+<hr>
+
+<div class="list-card">
+
+<div class="list-item">
+
+<span class="list-label">
+💰 Total Sales
+</span>
+
+<span
+id="totalSales"
+class="list-value">
+
+₹0.00
+
+</span>
+
+</div>
+
+<div class="list-item">
+
+<span class="list-label">
+🛒 Total Purchase
+</span>
+
+<span
+id="totalPurchase"
+class="list-value">
+
+₹0.00
+
+</span>
+
+</div>
+
+<div class="list-item">
+
+<span class="list-label">
+💸 Total Expenses
+</span>
+
+<span
+id="totalExpense"
+class="list-value">
+
+₹0.00
+
+</span>
+
+</div>
+
+<div class="list-item">
+
+<span class="list-label">
+📈 Gross Profit
+</span>
+
+<span
+id="grossProfit"
+class="list-value">
+
+₹0.00
+
+</span>
+
+</div>
+
+<div class="list-item">
+
+<span class="list-label">
+🏆 Net Profit
+</span>
+
+<span
+id="netProfit"
+class="list-value">
+
+₹0.00
+
+</span>
+
+</div>
+
+<div class="list-item">
+
+<span class="list-label">
+💵 Cash Balance
+</span>
+
+<span
+id="cashBalance"
+class="list-value">
+
+₹0.00
+
+</span>
+
+</div>
+
+<div class="list-item">
+
+<span class="list-label">
+🏦 Bank Balance
+</span>
+
+<span
+id="bankBalance"
+class="list-value">
+
+₹0.00
+
+</span>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="button-group">
+
+<button
+type="button"
+class="primary-btn"
+onclick="showProfitSummary()">
+
+📊 Summary
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="monthlyReport()">
+
+📅 Monthly
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="yearlyReport()">
+
+📆 Yearly
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="financialSummary()">
+
+💼 Financial Summary
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="businessPerformance()">
+
+📈 Performance
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="printProfitLoss()">
+
+🖨️ Print
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="exportPDF()">
+
+📄 Export PDF
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="exportExcel()">
+
+📊 Export Excel
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="refreshProfitLoss()">
+
+🔄 Refresh
+
+</button>
+
+<button
+type="button"
+class="success-btn"
+onclick="location.href='reports.html'">
+
+📊 Reports
+
+</button>
+
+<button
+type="button"
+class="success-btn"
+onclick="location.href='index.html'">
+
+🏠 Dashboard
+
+</button>
+
+</div>
+
+</div>
+
+<script src="common.js"></script>
+<script src="profitloss.js"></script>
+
+</body>
+
+</html>

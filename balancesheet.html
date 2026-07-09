@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BusinessOS - Balance Sheet</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📑 Balance Sheet</h1>
+
+<p>Business Financial Position</p>
+
+<hr>
+
+<h2>📅 Date Filter</h2>
+
+<input
+type="date"
+id="fromDate">
+
+<input
+type="date"
+id="toDate">
+
+<br><br>
+
+<button
+class="primary-btn"
+onclick="filterBalanceSheet()">
+
+🔍 Filter Balance Sheet
+
+</button>
+
+<hr>
+
+<div class="list-card">
+
+<div class="list-item">
+
+<span class="list-label">
+
+💵 Cash Balance
+
+</span>
+
+<span
+id="cashBalance"
+class="list-value">
+
+₹0.00
+
+</span>
+
+</div>
+
+<div class="list-item">
+
+<span class="list-label">
+
+🏦 Bank Balance
+
+</span>
+
+<span
+id="bankBalance"
+class="list-value">
+
+₹0.00
+
+</span>
+
+</div>
+
+<div class="list-item">
+
+<span class="list-label">
+
+📦 Inventory Value
+
+</span>
+
+<span
+id="inventoryValue"
+class="list-value">
+
+₹0.00
+
+</span>
+
+</div>
+
+<div class="list-item">
+
+<span class="list-label">
+
+👥 Accounts Receivable
+
+</span>
+
+<span
+id="accountsReceivable"
+class="list-value">
+
+₹0.00
+
+</span>
+
+</div>
+
+<div class="list-item">
+
+<span class="list-label">
+
+🏢 Accounts Payable
+
+</span>
+
+<span
+id="accountsPayable"
+class="list-value">
+
+₹0.00
+
+</span>
+
+</div>
+
+<div class="list-item">
+
+<span class="list-label">
+
+🏭 Fixed Assets
+
+</span>
+
+<span
+id="fixedAssets"
+class="list-value">
+
+₹0.00
+
+</span>
+
+</div>
+
+<div class="list-item">
+
+<span class="list-label">
+
+📊 Total Assets
+
+</span>
+
+<span
+id="totalAssets"
+class="list-value">
+
+₹0.00
+
+</span>
+
+</div>
+
+<div class="list-item">
+
+<span class="list-label">
+
+📉 Total Liabilities
+
+</span>
+
+<span
+id="totalLiabilities"
+class="list-value">
+
+₹0.00
+
+</span>
+
+</div>
+
+<div class="list-item">
+
+<span class="list-label">
+
+💰 Net Worth
+
+</span>
+
+<span
+id="netWorth"
+class="list-value">
+
+₹0.00
+
+</span>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="button-group">
+
+<button
+type="button"
+class="primary-btn"
+onclick="showAssetsSummary()">
+
+📊 Assets
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="showLiabilitiesSummary()">
+
+📉 Liabilities
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="showNetWorth()">
+
+💰 Net Worth
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="financialReport()">
+
+📑 Financial Report
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="businessPosition()">
+
+📈 Business Position
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="printBalanceSheet()">
+
+🖨️ Print
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="exportBalancePDF()">
+
+📄 Export PDF
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="exportBalanceExcel()">
+
+📊 Export Excel
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="refreshBalanceSheet()">
+
+🔄 Refresh
+
+</button>
+
+<button
+type="button"
+class="success-btn"
+onclick="location.href='reports.html'">
+
+📊 Reports
+
+</button>
+
+<button
+type="button"
+class="success-btn"
+onclick="location.href='index.html'">
+
+🏠 Dashboard
+
+</button>
+
+</div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+
+<script src="firebase.js"></script>
+<script src="common.js"></script>
+<script src="balancesheet.js"></script>
+
+</body>
+
+</html>

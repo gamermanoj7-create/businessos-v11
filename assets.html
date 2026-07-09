@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>BusinessOS - Assets</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📦 Asset Management</h1>
+
+<p>Manage Business Assets</p>
+
+<hr>
+
+<form id="assetForm">
+
+<input
+type="text"
+id="assetName"
+placeholder="📦 Asset Name"
+required>
+
+<select
+id="assetCategory"
+required>
+
+<option value="">📂 Select Category</option>
+
+<option value="Computer">💻 Computer</option>
+
+<option value="Laptop">🖥️ Laptop</option>
+
+<option value="Printer">🖨️ Printer</option>
+
+<option value="Furniture">🪑 Furniture</option>
+
+<option value="Vehicle">🚗 Vehicle</option>
+
+<option value="Machine">🏭 Machine</option>
+
+<option value="Mobile">📱 Mobile</option>
+
+<option value="Other">📦 Other</option>
+
+</select>
+
+<input
+type="date"
+id="purchaseDate">
+
+<input
+type="number"
+id="purchasePrice"
+placeholder="💰 Purchase Price"
+min="0">
+
+<input
+type="text"
+id="assetLocation"
+placeholder="📍 Asset Location">
+
+<select
+id="assetEmployee">
+
+<option value="">
+👤 Assign Employee
+</option>
+
+</select>
+
+<select
+id="assetCondition">
+
+<option value="New">
+🆕 New
+</option>
+
+<option value="Good">
+✅ Good
+</option>
+
+<option value="Repair">
+🔧 Repair
+</option>
+
+<option value="Damaged">
+❌ Damaged
+</option>
+
+</select>
+
+<select
+id="assetStatus">
+
+<option value="Active">
+🟢 Active
+</option>
+
+<option value="Inactive">
+🔴 Inactive
+</option>
+
+</select>
+
+<br><br>
+
+<button
+type="submit"
+class="success-btn">
+
+💾 Save Asset
+
+</button>
+
+</form>
+
+<hr>
+
+<h2>📦 Asset List</h2>
+
+<input
+type="text"
+id="searchAsset"
+class="search-box"
+placeholder="🔍 Search Asset"
+onkeyup="searchAsset()">
+
+<br><br>
+
+<h3>
+
+📦 Total Assets :
+<span id="totalAssets">0</span>
+
+</h3>
+
+<h3>
+
+💰 Total Asset Value :
+<span id="totalAssetValue">₹0.00</span>
+
+</h3>
+
+<br>
+
+<div id="assetTable">
+
+<div class="list-card">
+
+<h3>📦 No Asset Found</h3>
+
+<p>Add your first asset.</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='index.html'">
+
+🏠 Back to Dashboard
+
+</button>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+
+<script src="firebase.js"></script>
+<script src="common.js"></script>
+<script src="assets.js"></script>
+
+</body>
+
+</html>

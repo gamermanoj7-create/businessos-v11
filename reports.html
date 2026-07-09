@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Reports | BusinessOS</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container" id="reportSection">
+
+<h1>📊 Business Reports</h1>
+
+<p>BusinessOS Analytics & Reports</p>
+
+<hr>
+
+<h2>📈 Summary</h2>
+
+<div class="dashboard-grid">
+
+<div class="dashboard-card">
+
+<h3>Total Sales</h3>
+
+<h2 id="reportSales">₹0.00</h2>
+
+</div>
+
+<div class="dashboard-card">
+
+<h3>Total Purchase</h3>
+
+<h2 id="reportPurchase">₹0.00</h2>
+
+</div>
+
+<div class="dashboard-card">
+
+<h3>Total Expense</h3>
+
+<h2 id="reportExpense">₹0.00</h2>
+
+</div>
+
+<div class="dashboard-card">
+
+<h3>Net Profit</h3>
+
+<h2 id="reportProfit">₹0.00</h2>
+
+</div>
+
+<div class="dashboard-card">
+
+<h3>Total Stock</h3>
+
+<h2 id="reportStock">0</h2>
+
+</div>
+
+<div class="dashboard-card">
+
+<h3>Customer Due</h3>
+
+<h2 id="reportDue">₹0.00</h2>
+
+</div>
+
+</div>
+
+<hr>
+
+<h2>📋 Reports</h2>
+
+<input
+type="text"
+id="searchReport"
+class="search-box"
+placeholder="🔍 Search Report"
+onkeyup="searchReport()">
+
+<br><br>
+
+<div id="reportTable">
+
+<div class="list-card">
+
+<h3>📊 No Reports Found</h3>
+
+<p>Reports will appear here.</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="button-group">
+
+<button
+type="button"
+class="primary-btn"
+onclick="previewReport()">
+
+👁️ Preview
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="printReport()">
+
+🖨️ Print
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="exportCSV()">
+
+📄 Export CSV
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="exportPDF()">
+
+📑 Export PDF
+
+</button>
+
+</div>
+
+<hr>
+
+<button
+type="button"
+class="success-btn"
+onclick="location.href='index.html'">
+
+🏠 Back to Dashboard
+
+</button>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<script src="firebase.js"></script>
+<script src="common.js"></script>
+<script src="reports.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</body>
+
+</html>

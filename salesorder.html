@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BusinessOS - Sales Order</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📄 Sales Order</h1>
+
+<p>Create & Manage Sales Orders</p>
+
+<hr>
+
+<form id="salesOrderForm">
+
+<select
+id="soCustomer"
+required>
+
+<option value="">
+👤 Select Customer
+</option>
+
+</select>
+
+<input
+type="date"
+id="soDate"
+required>
+
+<input
+type="text"
+id="soProduct"
+placeholder="📦 Product Name"
+required>
+
+<input
+type="number"
+id="soQuantity"
+placeholder="🔢 Quantity"
+min="1"
+required>
+
+<input
+type="number"
+id="soUnitPrice"
+placeholder="💰 Unit Price"
+min="0"
+step="0.01"
+required>
+
+<input
+type="number"
+id="soTotal"
+placeholder="💵 Total Amount"
+readonly>
+
+<input
+type="date"
+id="soDeliveryDate">
+
+<select
+id="soStatus">
+
+<option value="Pending">
+🟡 Pending
+</option>
+
+<option value="Confirmed">
+📦 Confirmed
+</option>
+
+<option value="Delivered">
+✅ Delivered
+</option>
+
+<option value="Cancelled">
+❌ Cancelled
+</option>
+
+</select>
+
+<textarea
+id="soNotes"
+placeholder="📝 Notes"
+rows="4"></textarea>
+
+<br><br>
+
+<button
+type="submit"
+class="success-btn">
+
+💾 Save Sales Order
+
+</button>
+
+</form>
+
+<hr>
+
+<h2>📄 Sales Order List</h2>
+
+<input
+type="text"
+id="searchSalesOrder"
+class="search-box"
+placeholder="🔍 Search Sales Order"
+onkeyup="searchSalesOrder()">
+
+<br><br>
+
+<h3>
+
+📄 Total Orders :
+<span id="totalSalesOrders">0</span>
+
+</h3>
+
+<h3>
+
+💰 Total Sales :
+<span id="totalSalesAmount">₹0.00</span>
+
+</h3>
+
+<br>
+
+<div id="salesOrderTable">
+
+<div class="list-card">
+
+<h3>📄 No Sales Order Found</h3>
+
+<p>Create your first Sales Order.</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="button-group">
+
+<button
+type="button"
+class="primary-btn"
+onclick="refreshSalesOrders()">
+
+🔄 Refresh
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='customers.html'">
+
+👤 Customers
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='products.html'">
+
+📦 Products
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='reports.html'">
+
+📊 Reports
+
+</button>
+
+<button
+type="button"
+class="success-btn"
+onclick="location.href='index.html'">
+
+🏠 Dashboard
+
+</button>
+
+</div>
+
+</div>
+
+<script src="common.js"></script>
+<script src="salesorder.js"></script>
+
+</body>
+
+</html>

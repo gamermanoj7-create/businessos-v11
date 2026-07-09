@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>BusinessOS - Cash Book</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>💵 Cash Book</h1>
+
+<p>Manage Cash In & Cash Out Transactions</p>
+
+<hr>
+
+<form id="cashbookForm">
+
+<select
+id="transactionType"
+required>
+
+<option value="Cash In">
+💰 Cash In
+</option>
+
+<option value="Cash Out">
+💸 Cash Out
+</option>
+
+</select>
+
+<input
+type="date"
+id="transactionDate"
+required>
+
+<select
+id="transactionCategory"
+required>
+
+<option value="">📂 Select Category</option>
+
+<option value="Sales">
+🛒 Sales
+</option>
+
+<option value="Purchase">
+📦 Purchase
+</option>
+
+<option value="Expense">
+💸 Expense
+</option>
+
+<option value="Salary">
+👨‍💼 Salary
+</option>
+
+<option value="Rent">
+🏢 Rent
+</option>
+
+<option value="Transport">
+🚚 Transport
+</option>
+
+<option value="Bank">
+🏦 Bank
+</option>
+
+<option value="Investment">
+📈 Investment
+</option>
+
+<option value="Other">
+📁 Other
+</option>
+
+</select>
+
+<input
+type="text"
+id="transactionDescription"
+placeholder="📝 Description">
+
+<input
+type="number"
+id="transactionAmount"
+placeholder="💰 Amount"
+min="0"
+required>
+
+<select
+id="paymentMethod">
+
+<option value="Cash">
+💵 Cash
+</option>
+
+<option value="UPI">
+📱 UPI
+</option>
+
+<option value="Bank">
+🏦 Bank Transfer
+</option>
+
+<option value="Cheque">
+🧾 Cheque
+</option>
+
+</select>
+
+<br><br>
+
+<button
+type="submit"
+class="success-btn">
+
+💾 Save Transaction
+
+</button>
+
+</form>
+
+<hr>
+
+<h2>💵 Cash Book Records</h2>
+
+<input
+type="text"
+id="searchTransaction"
+class="search-box"
+placeholder="🔍 Search Transaction"
+onkeyup="searchTransaction()">
+
+<br><br>
+
+<h3>
+
+📊 Total Transactions :
+<span id="totalTransactions">0</span>
+
+</h3>
+
+<h3>
+
+💰 Current Cash Balance :
+<span id="cashBalance">₹0.00</span>
+
+</h3>
+
+<br>
+
+<div id="cashbookTable">
+
+<div class="list-card">
+
+<h3>💵 No Transaction Found</h3>
+
+<p>Add your first transaction.</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="button-group">
+
+<button
+type="button"
+class="primary-btn"
+onclick="refreshCashbook()">
+
+🔄 Refresh
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='reports.html'">
+
+📊 Reports
+
+</button>
+
+<button
+type="button"
+class="success-btn"
+onclick="location.href='index.html'">
+
+🏠 Dashboard
+
+</button>
+
+</div>
+
+</div>
+
+<script src="common.js"></script>
+<script src="cashbook.js"></script>
+
+</body>
+
+</html>

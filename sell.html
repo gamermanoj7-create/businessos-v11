@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Sell Products | BusinessOS</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>💰 Sales Management</h1>
+
+<p>Create & Manage Product Sales</p>
+
+<hr>
+
+<form id="sellForm">
+
+<select id="sellCustomer" required>
+
+<option value="">
+👤 Select Customer
+</option>
+
+</select>
+
+<select id="sellProduct" required>
+
+<option value="">
+📦 Select Product
+</option>
+
+</select>
+
+<input
+type="number"
+id="sellQty"
+placeholder="📦 Quantity"
+min="1"
+required>
+
+<input
+type="number"
+id="sellPrice"
+placeholder="💰 Selling Price"
+readonly>
+
+<input
+type="number"
+id="sellTotal"
+placeholder="💵 Total Amount"
+readonly>
+
+<button
+type="button"
+class="primary-btn"
+onclick="addSaleItem()">
+
+➕ Add Product
+
+</button>
+
+<hr>
+
+<input
+type="number"
+id="discount"
+placeholder="🎁 Discount (%)"
+value="0">
+
+<input
+type="number"
+id="grandTotal"
+placeholder="💰 Grand Total"
+readonly>
+
+<select id="paymentStatus">
+
+<option value="Paid">
+✅ Paid
+</option>
+
+<option value="Partial">
+🟡 Partial
+</option>
+
+<option value="Due">
+🔴 Due
+</option>
+
+</select>
+
+<br><br>
+
+<button
+type="submit"
+class="success-btn">
+
+💾 Save Sale
+
+</button>
+
+</form>
+
+<hr>
+
+<h2>🛒 Sale Items</h2>
+
+<div id="saleItems">
+
+<div class="list-card">
+
+<h3>📦 No Product Added</h3>
+
+<p>Add products to continue.</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<h2>📋 Sales History</h2>
+
+<input
+type="text"
+id="searchSale"
+class="search-box"
+placeholder="🔍 Search Sale"
+onkeyup="searchSale()">
+
+<br><br>
+
+<div id="saleHistory">
+
+<div class="list-card">
+
+<h3>🧾 No Sales Found</h3>
+
+<p>Sales History Empty</p>
+
+</div>
+
+</div>
+
+<br>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='index.html'">
+
+🏠 Dashboard
+
+</button>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<script src="firebase.js"></script>
+<script src="common.js"></script>
+<script src="sell.js"></script>
+
+</body>
+
+</html>

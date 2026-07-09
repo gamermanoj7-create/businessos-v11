@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>BusinessOS V11 - Login</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="login-card">
+
+<h1>🏢 BusinessOS V11</h1>
+
+<p>Professional ERP & Accounting Software</p>
+
+<hr>
+
+<form id="loginForm">
+
+<input
+type="email"
+id="loginEmail"
+placeholder="📧 Email Address"
+required>
+
+<input
+type="password"
+id="loginPassword"
+placeholder="🔒 Password"
+required>
+
+<div class="remember-box">
+
+<label>
+
+<input
+type="checkbox"
+id="rememberMe"
+onchange="toggleRemember()">
+
+Remember Me
+
+</label>
+
+</div>
+
+<br>
+
+<button
+type="button"
+class="success-btn"
+onclick="loginUser()">
+
+🔓 Login
+
+</button>
+
+</form>
+
+<hr>
+
+<div class="login-links">
+
+<button
+class="primary-btn"
+onclick="location.href='forgotpassword.html'">
+
+🔑 Forgot Password
+
+</button>
+
+<br><br>
+
+<button
+class="primary-btn"
+onclick="location.href='register.html'">
+
+📝 Create New Account
+
+</button>
+
+</div>
+
+<hr>
+
+<div class="list-card">
+
+<div class="list-item">
+
+<span class="list-label">
+
+👤 User
+
+</span>
+
+<span
+id="userName"
+class="list-value">
+
+-
+
+</span>
+
+</div>
+
+<div class="list-item">
+
+<span class="list-label">
+
+📧 Email
+
+</span>
+
+<span
+id="userEmail"
+class="list-value">
+
+-
+
+</span>
+
+</div>
+
+<div class="list-item">
+
+<span class="list-label">
+
+🛡️ Role
+
+</span>
+
+<span
+id="userRole"
+class="list-value">
+
+-
+
+</span>
+
+</div>
+
+<div class="list-item">
+
+<span class="list-label">
+
+🌐 Status
+
+</span>
+
+<span
+id="onlineStatus"
+class="list-value">
+
+🟢 Online
+
+</span>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="button-group">
+
+<button
+class="primary-btn"
+onclick="location.href='index.html'">
+
+🏠 Home
+
+</button>
+
+<button
+class="primary-btn"
+onclick="location.reload()">
+
+🔄 Refresh
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+<script src="firebase.js"></script>
+<script src="common.js"></script>
+<script src="login.js"></script>
+
+</body>
+
+</html>

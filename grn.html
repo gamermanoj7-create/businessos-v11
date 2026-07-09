@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BusinessOS - Goods Receipt Note (GRN)</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📥 Goods Receipt Note (GRN)</h1>
+
+<p>Receive Purchased Goods From Supplier</p>
+
+<hr>
+
+<form id="grnForm">
+
+<select
+id="grnPurchaseOrder"
+required>
+
+<option value="">
+📦 Select Purchase Order
+</option>
+
+</select>
+
+<input
+type="date"
+id="grnDate"
+required>
+
+<input
+type="number"
+id="receivedQty"
+placeholder="✅ Received Quantity"
+min="1"
+required>
+
+<input
+type="number"
+id="damagedQty"
+placeholder="❌ Damaged Quantity"
+min="0"
+value="0">
+
+<select
+id="grnStatus">
+
+<option value="Pending">
+🟡 Pending
+</option>
+
+<option value="Partial">
+📦 Partial
+</option>
+
+<option value="Completed">
+✅ Completed
+</option>
+
+</select>
+
+<textarea
+id="grnRemarks"
+rows="4"
+placeholder="📝 Remarks"></textarea>
+
+<br><br>
+
+<button
+type="submit"
+class="success-btn">
+
+💾 Save GRN
+
+</button>
+
+</form>
+
+<hr>
+
+<h2>📥 GRN List</h2>
+
+<input
+type="text"
+id="searchGRN"
+class="search-box"
+placeholder="🔍 Search GRN"
+onkeyup="searchGRN()">
+
+<br><br>
+
+<h3>
+
+📥 Total GRN :
+<span id="totalGRN">0</span>
+
+</h3>
+
+<br>
+
+<div id="grnTable">
+
+<div class="list-card">
+
+<h3>📥 No GRN Found</h3>
+
+<p>Create your first GRN.</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="button-group">
+
+<button
+type="button"
+class="primary-btn"
+onclick="refreshGRN()">
+
+🔄 Refresh
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='purchaseorder.html'">
+
+📦 Purchase Orders
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='inventory.html'">
+
+📦 Inventory
+
+</button>
+
+<button
+type="button"
+class="primary-btn"
+onclick="location.href='reports.html'">
+
+📊 Reports
+
+</button>
+
+<button
+type="button"
+class="success-btn"
+onclick="location.href='index.html'">
+
+🏠 Dashboard
+
+</button>
+
+</div>
+
+</div>
+
+<script src="common.js"></script>
+<script src="grn.js"></script>
+
+</body>
+
+</html>
