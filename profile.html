@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>BusinessOS V11 - My Profile</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="login-card">
+
+<h1>👤 My Profile</h1>
+
+<p>BusinessOS V11 User Profile</p>
+
+<hr>
+
+<div align="center">
+
+<img
+id="profileImage"
+src="images/default-user.png"
+alt="Profile"
+class="profile-image"
+onerror="this.src='images/default-user.png'">
+
+</div>
+
+<br>
+
+<input
+type="file"
+id="profilePhotoFile"
+accept="image/*">
+
+<br><br>
+
+<button
+class="primary-btn"
+onclick="uploadProfilePhoto()">
+
+📷 Upload Photo
+
+</button>
+
+<hr>
+
+<input
+type="text"
+id="profileName"
+placeholder="👤 Full Name"
+readonly>
+
+<input
+type="text"
+id="profileBusiness"
+placeholder="🏢 Business Name"
+readonly>
+
+<input
+type="tel"
+id="profilePhone"
+placeholder="📱 Phone Number"
+readonly>
+
+<input
+type="email"
+id="profileEmail"
+placeholder="📧 Email"
+readonly>
+
+<input
+type="text"
+id="profileRole"
+placeholder="🛡️ Role"
+readonly>
+
+<input
+type="text"
+id="profileStatus"
+placeholder="🟢 Status"
+readonly>
+
+<hr>
+
+<h3>🔒 Change Password</h3>
+
+<input
+type="password"
+id="newPassword"
+placeholder="New Password">
+
+<button
+class="primary-btn"
+onclick="changePassword()">
+
+🔒 Change Password
+
+</button>
+
+<hr>
+
+<div class="list-card">
+
+<div class="list-item">
+
+<span class="list-label">
+
+📅 Created
+
+</span>
+
+<span
+id="createdDate"
+class="list-value">
+
+-
+
+</span>
+
+</div>
+
+<div class="list-item">
+
+<span class="list-label">
+
+🕒 Last Login
+
+</span>
+
+<span
+id="lastLogin"
+class="list-value">
+
+-
+
+</span>
+
+</div>
+
+<div class="list-item">
+
+<span class="list-label">
+
+📧 Email Status
+
+</span>
+
+<span
+id="emailStatus"
+class="list-value">
+
+❌ Not Verified
+
+</span>
+
+</div>
+
+<div class="list-item">
+
+<span class="list-label">
+
+🌐 Network
+
+</span>
+
+<span
+id="onlineStatus"
+class="list-value">
+
+🟢 Online
+
+</span>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="button-group">
+
+<button
+class="primary-btn"
+onclick="enableEdit()">
+
+✏️ Edit
+
+</button>
+
+<button
+class="success-btn"
+onclick="saveProfile()">
+
+💾 Save
+
+</button>
+
+<button
+class="primary-btn"
+onclick="resetProfile()">
+
+♻️ Reset
+
+</button>
+
+<button
+class="primary-btn"
+onclick="verifyEmail()">
+
+📧 Verify Email
+
+</button>
+
+<button
+class="primary-btn"
+onclick="refreshProfile()">
+
+🔄 Refresh
+
+</button>
+
+<button
+class="primary-btn"
+onclick="logoutUser()">
+
+🚪 Logout
+
+</button>
+
+</div>
+
+<hr>
+
+<div class="button-group">
+
+<button
+class="primary-btn"
+onclick="location.href='index.html'">
+
+🏠 Dashboard
+
+</button>
+
+<button
+class="primary-btn"
+onclick="location.href='settings.html'">
+
+⚙️ Settings
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+<script src="firebase.js"></script>
+<script src="common.js"></script>
+<script src="profile.js"></script>
+
+</body>
+
+</html>
